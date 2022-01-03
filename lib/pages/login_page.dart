@@ -57,7 +57,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintText: "Enter Username:", labelText: "Username:"),
                       validator: (value){
                         if(value!.isEmpty){
-                          return "Username cannot be ampty";
+                          return "Username cannot be empty";
                         }
                         return null;
                       },
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                         }
                         else if(value.length<6){
 
-                          return "passwod length should be atleast 6";
+                          return "password length should be atleast 6";
 
                         }
                         return null;
