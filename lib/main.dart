@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app2/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
 
 void main() {
@@ -9,12 +10,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+
     int days = 30;
     bringVegetables(rupees: 50);
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(brightness: Brightness.light),
-      initialRoute: "/home",
+      theme: ThemeData(primarySwatch: Colors.deepPurple,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          primaryTextTheme:GoogleFonts.latoTextTheme()),
+      initialRoute: "/",
       routes: {
         "/":(context) => LoginPage(),
         "/home":(context) => HomePAge(),
