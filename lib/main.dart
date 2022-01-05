@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app2/pages/cart_page.dart';
 import 'package:flutter_app2/pages/login_page.dart';
 import 'package:flutter_app2/utils/routes.dart';
 import 'package:flutter_app2/widgets/theme.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     int days = 30;
     bringVegetables(rupees: 50);
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme:MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         "/":(context) => LoginPage(),
         MyRoutes.HomeRoute:(context) => HomePAge(),
         MyRoutes.loginRoute:(context) => LoginPage(),
+        MyRoutes.cartRoute:(context) => CartPage(),
       },
     );
   }
