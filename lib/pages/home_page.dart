@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter_app2/models/catalog.dart';
+import 'package:flutter_app2/utils/routes.dart';
 import 'package:flutter_app2/widgets/drawer.dart';
 import 'package:flutter_app2/widgets/home_widgets/CatalogHeader.dart';
 import 'package:flutter_app2/widgets/home_widgets/CatalogList.dart';
@@ -44,11 +45,15 @@ class _HomePAgeState extends State<HomePAge> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
+      floatingActionButton: FloatingActionButton(onPressed: ()=>Navigator.pushNamed(context, MyRoutes.cartRoute),
+        backgroundColor: MyTheme.darkBluishColor,
+      child: Icon(CupertinoIcons.cart),),
       /*appBar: AppBar(
         title: Text('Catalog App'),
       ),*/
       body:SafeArea(
+
         child: Container(
           padding: Vx.m32,
           child: Column(

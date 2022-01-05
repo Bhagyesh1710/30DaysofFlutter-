@@ -9,6 +9,6 @@ class CatalogImage extends StatelessWidget {
   const CatalogImage({Key? key,required this.imageUrl}) : assert(imageUrl!=null),super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Image.network(imageUrl).box.rounded.p8.color(MyTheme.creamColor).make().p16().w40(context);
+    return Image.network(imageUrl).box.rounded.p8.color(context.canvasColor).make().p16().w40(context);
   }
 }

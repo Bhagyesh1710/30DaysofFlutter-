@@ -13,7 +13,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creamColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -31,7 +33,7 @@ class HomeDetailPage extends StatelessWidget {
                     StadiumBorder(),
                   ),
                 ),
-                child: "Buy".text.make()).wh(100, 50),
+                child: "Add to Cart".text.make()).wh(120, 50),
           ],
         ).p32(),
       ),
@@ -56,6 +58,9 @@ class HomeDetailPage extends StatelessWidget {
                           catalog.name.text.xl4.color(MyTheme.darkBluishColor).bold.make(),
                           catalog.desc.text.caption(context).xl.make(),
                           10.heightBox,
+                          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+                              .text.make().p16()
+
                         ],
 
                       ).py64(),
