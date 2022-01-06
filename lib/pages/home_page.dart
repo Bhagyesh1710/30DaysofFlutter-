@@ -47,8 +47,8 @@ class _HomePAgeState extends State<HomePAge> {
     return Scaffold(
       backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(onPressed: ()=>Navigator.pushNamed(context, MyRoutes.cartRoute),
-        backgroundColor: MyTheme.darkBluishColor,
-      child: Icon(CupertinoIcons.cart),),
+        backgroundColor: context.theme.buttonColor,
+      child: Icon(CupertinoIcons.cart,color: Colors.white,),),
       /*appBar: AppBar(
         title: Text('Catalog App'),
       ),*/

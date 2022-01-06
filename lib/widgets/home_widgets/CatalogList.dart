@@ -13,7 +13,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
+        final catalog = CatalogModel.getPosition(index);
         return InkWell(
             onTap: () => Navigator.push(
                   context,
@@ -47,7 +47,7 @@ class CatalogItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                catalog.name.text.lg.color(MyTheme.darkBluishColor).bold.make(),
+                catalog.name.text.lg.color(context.accentColor).bold.make(),
                 catalog.desc.text.caption(context).make(),
                 10.heightBox,
                 ButtonBar(
@@ -59,7 +59,7 @@ class CatalogItem extends StatelessWidget {
                         onPressed: () {},
                         style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
-                              MyTheme.darkBluishColor),
+                              context.theme.buttonColor),
                           shape: MaterialStateProperty.all(
                             StadiumBorder(),
                           ),
